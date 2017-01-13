@@ -8,6 +8,7 @@
   NarrowItDownController.inject = ['MenuSearchService'];
   function NarrowItDownController(MenuSearchService){
     var narrowDownCtrl = this;
+    narrowDownCtrl.searchTerm='';
     narrowDownCtrl.found = [];
     narrowDownCtrl.search = function(){
       if(narrowDownCtrl.searchTerm === ''){
