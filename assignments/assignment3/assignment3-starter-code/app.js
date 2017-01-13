@@ -8,8 +8,12 @@
   NarrowItDownController.inject = ['MenuSearchService'];
   function NarrowItDownController(MenuSearchService){
     var narrowDownCtrl = this;
-
+    narrowDownCtrl.found = [];
     narrowDownCtrl.search = function(){
+      if(narrowDownCtrl.searchTerm === ''){
+        narrowDownCtrl.found = [];
+        return;
+      }
       MenuSearchService.getMatchedMenuItems(narrowDownCtrl.searchTerm).then(function(result){
       narrowDownCtrl.found = result;
       console.log("Assigning foundItem to controller");
