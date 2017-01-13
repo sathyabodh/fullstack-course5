@@ -1,5 +1,6 @@
 <div class="foundItems">
-  <h3>Searched items:{{foundItems.length}}</h3>
+  <h3 data-ng-if = "foundItems.length > 0">Searched items:{{foundItems.length}}</h3>
+  <h3 data-ng-if = "foundItems.length === 0">Nothing found</h3>
   <ul>
     <li ng-repeat="item in foundItems">
       {{item.name}},{{item.short_name}},{{item.description}}
