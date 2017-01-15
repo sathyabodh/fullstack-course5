@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Restuarent menu</title>
+  <script src="lib/angular.min.js"></script>
+  <script src="lib/angular-ui-router.min.js"></script>
+  <script src="menuapp.module.js"></script>
+  <script src="category.controller.js"></script>
+  <script src="data.module.js"></script>
+  <script src="menu-data-service.js"></script>
+  <script src="categories.component.js"></script>
+  <script src="itemdetail.controller.js"></script>
+  <script src="items.component.js"></script>
+  <script src="routes.js"></script>
+</head>
+<body ng-app="MenuApp">
+  <div ng-controller="RouteLogger">
+    <h3>Route Logger</h3>
+  </div>
+  <ui-view></ui-view>
+</body>
+</html>
